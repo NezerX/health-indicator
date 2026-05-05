@@ -1,51 +1,63 @@
-# Health Indicator
+You can find the Latest version here: https://github.com/NezerX/health-indicator/releases
 
-A lightweight, high-performance health bar mod for **Minecraft 1.20.1 (Forge)**. It provides a clean combat interface by displaying a health indicator only when necessary, avoiding configuration menus and UI clutter[cite: 1, 4].
+Health Indicator
 
----
+Health Indicator is a lightweight Minecraft mod for the Forge loader that adds a clean, Souls-like health display for hostile mobs[cite: 1, 4].
 
-## Features
+Features
 
-### Dynamic Combat UI
-* **Souls-like Visuals**: Implements a three-layer rendering system where a secondary damage bar lingers and gradually fades after a hit, providing clear visual feedback[cite: 2].
-* **Contextual Visibility**: The indicator only appears when a mob is aggressive, has a target, is taking damage, or is a Creeper in its swelling state[cite: 2].
-* **Smart Filtering**: Automatically ignores passive mobs (cows, sheep, villagers) to focus exclusively on hostile threats[cite: 2].
+Souls-like Health Bar: A multi-layered indicator featuring a background, a primary health layer, and a "damage" layer that lingers and fades gradually after a hit[cite: 2].
 
-### Technical Implementation
-* **Performance Optimized**: Uses a `WeakHashMap` to cache entity data, ensuring automatic memory cleanup when mobs die or despawn[cite: 2].
-* **High Contrast Text**: Damage numbers are rendered using `LightTexture.FULL_BRIGHT`, ensuring perfect visibility in caves and at night[cite: 2].
-* **Smart Occlusion**: Bars respect line-of-sight and are culled beyond a 20-block radius to maintain immersion and performance[cite: 2].
+Contextual Visibility: To maintain a clean UI, the bar only appears when a mob is aggressive, taking damage, or in a specific state like a Creeper about to explode[cite: 2].
 
----
+Dynamic Damage Text: Shows the exact amount of damage dealt below the health bar. The text is rendered at full brightness for perfect visibility in dark environments[cite: 2].
 
-## Technical Specifications
+Smart Targeting: Automatically filters out passive mobs. The health indicator is strictly for hostile enemies and entities in combat[cite: 2].
 
-| Requirement | Value |
-| :--- | :--- |
-| **Minecraft Version** | 1.20.1[cite: 4] |
-| **Mod Loader** | Forge[cite: 1, 4] |
-| **Mappings** | Mojang[cite: 2, 3] |
-| **Mod ID** | `healthindicator`[cite: 1, 4] |
+Distance & Line-of-Sight: Bars are automatically hidden if the mob is behind a wall or further than 20 blocks away from the player[cite: 2].
 
----
+Mechanics
 
-## Installation
+Automatic Caching: Uses a WeakHashMap to track mob health states, ensuring the mod uses minimal memory and automatically cleans up when mobs despawn[cite: 2].
 
-1. Install **Forge 1.20.1**[cite: 1, 4].
-2. Download the latest `.jar` from the [Releases](https://github.com/NezerX/health-indicator/releases) section.
-3. Place the file into your `mods` folder.
-4. Launch Minecraft and start hunting.
+Zero Configuration: Designed as a "plug and play" mod. No menus, no config files, and no complex setup required[cite: 1, 2].
 
----
+Technical Information
 
-## Project Structure
+Minecraft Version: 1.20.1[cite: 4]
 
-* **`HealthIndicatorMod.java`**: Main entry point and event bus registration[cite: 1].
-* **`HealthRenderEventHandler.java`**: Core logic for visibility, Souls-like interpolation, and damage tracking[cite: 2].
-* **`RenderHelper.java`**: Utility class for low-level texture rendering using `PoseStack` and `BufferBuilder`[cite: 3].
+Mod Loader: Forge[cite: 1, 4]
 
----
+Mappings: Mojang[cite: 2, 3]
 
-## License
+Environment: Client-side rendering[cite: 1, 2].
 
-This project is licensed under the **MIT License**. See the `mods.toml` file for details[cite: 4].
+Installation
+
+Ensure you have the latest version of the Forge Loader for 1.20.1 installed.
+
+Download the Health Indicator jar file.
+
+Place the jar file into your mods folder.
+
+Building from source
+
+To build the mod locally, clone the repository and run the following command in your terminal:
+
+./gradlew build
+
+The compiled jar will be located in build/libs.
+
+Contributing
+
+Contributions are welcome. Please follow these steps:
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Submit a Pull Request with a detailed description of your changes.
+
+For bug reports, please use the GitHub Issues tab.
+
+License
+
+This project is licensed under the MIT License[cite: 4]. You are free to use the code with proper attribution.
