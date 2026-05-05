@@ -6,11 +6,11 @@ license="MIT License"
 modId="healthindicator"
 version="1.0.0"
 displayName="Health Indicator"
-displayURL="google.com"
-credits="."
+displayURL="https://github.com/NezerX/health-indicator"
+credits="Josefumi"
 authors="NezerX"
 description='''
-.
+ A simple souls-like health indicator.
 '''
 
 [[dependencies.healthindicator]]
