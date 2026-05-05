@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="[33,)"
+license="MIT License"
+
+[[mods]]
+modId="healthindicator"
+version="1.0.0"
+displayName="Health Indicator"
+displayURL="google.com"
+credits="."
+authors="NezerX"
+description='''
+.
+'''
+
+[[dependencies.healthindicator]]
+    modId="forge" 
+    mandatory=true 
+    versionRange="[33,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.healthindicator]]
+    modId="minecraft"
+    mandatory=true
+	versionRange="[1.19,1.22)"
+    ordering="NONE"
+    side="BOTH"
